@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head>
+	<title>Insert title here</title>
+</head> 
+	<body>
+		<h1>Agregar usuario</h1>
+		
+		<form action="#" th:action="@{/validar}" th:object="${producto}" method="post">
+			<p>
+				Codigo: <br><input type="number" th:field="*{codigo}">
+				<span th:errors="*{codigo}" style="color: #FF0000"></span>
+			</p> 
+			<p>
+				Nombre: <br><input type="text" th:field="*{nombre}">
+				<span th:errors="*{nombre}" style="color: #FF0000"></span>
+			</p> 
+			<p>
+				Marca: <br><input type="text" th:field="*{marca}">
+				<span th:errors="*{marca}" style="color: #FF0000"></span>
+			</p> 
+			<p>
+				Descripcion: <br><textarea type="text" th:field="*{descripcion}" rows="10" cols="25"></textarea>
+				<span th:errors="*{descripcion}" style="color: #FF0000"></span>
+			</p> 
+			<p>
+				Existencias: <br><input type="text" th:field="*{existencias}">
+				<span th:errors="*{existencias}" style="color: #FF0000"></span>
+			</p> 
+			<p>
+				Fecha de ingreso: <br><input type="text" th:field="*{fingreso}" placeholder="dd/mm/yyyy">
+				<span th:errors="*{fingreso}" style="color: #FF0000"></span>
+			</p> 
+			<p>
+				<input type="submit" value="Guardar producto"/>
+			</p>
+		</form> 
+	</body> 
+</html>
